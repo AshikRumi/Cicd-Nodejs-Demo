@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 167906152460.dkr.ecr.us-west-2.amazonaws.com/cicd-nodejs-demo:latest
-      - printf '[{"name":"helloworld","imageUri":"%s"}]' 167906152460.dkr.ecr.us-west-2.amazonaws.com/cicd-nodejs-demo:latest > imagedefinitions.json
+      - printf '[{"name":"cicdnodejsservice","imageUri":"%s"}]' 167906152460.dkr.ecr.us-west-2.amazonaws.com/cicd-nodejs-demo:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
